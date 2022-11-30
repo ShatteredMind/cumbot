@@ -1,0 +1,18 @@
+version: "3"
+services:
+  database:
+    image: postgres:12
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+  main:
+    build: .
+    command: python main.py
+    env_file:
+      - .env
+    depends_on:
+      - db
+    restart: always
