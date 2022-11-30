@@ -6,9 +6,9 @@ from discord.ext import commands
 from discord.utils import get
 
 from const import COLORS
-from models import Pudge
+from database.models import Pudge
 from settings import GUILD, CHANNEL
-from store.database.models import get_all_titles_for_model, add_cum_word
+from database.utils import get_all_titles_for_model, add_cum_word
 
 
 class Events(commands.Cog):

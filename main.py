@@ -1,9 +1,9 @@
 import asyncio
 
-from events import Events
+from bot.events import Events
 from settings import bot, TOKEN
-from store.database.models import init_pudge_names
-from store.database.accessor import session
+from database.utils import init_pudge_names
+from database.session import session
 
 
 async def init_app():

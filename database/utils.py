@@ -2,8 +2,8 @@ from typing import Any, List
 
 from sqlalchemy import update, select
 
-from store.database.accessor import session
-from const import PUDGE_NAMES
+from database.session import session
+from bot.const import PUDGE_NAMES
 from models import Pudge, Word
 
 
