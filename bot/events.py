@@ -5,10 +5,10 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 
-from const import COLORS
+from bot.const import COLORS
 from database.models import Pudge
-from settings import GUILD, CHANNEL
 from database.utils import get_all_titles_for_model, add_cum_word
+from settings import GUILD, CHANNEL
 
 
 class Events(commands.Cog):

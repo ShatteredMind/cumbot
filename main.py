@@ -1,9 +1,9 @@
 import asyncio
 
 from bot.events import Events
-from settings import bot, TOKEN
 from database.utils import init_pudge_names
 from database.session import session
+from settings import bot, TOKEN
 
 
 async def init_app():
@@ -14,7 +14,10 @@ async def init_app():
     print('Init completed')
 
 
+async def main():
+    await init_app()
+
+
 if __name__ == '__main__':
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(init_app())
-    loop.run_until_complete(bot.run(TOKEN))
+    asyncio.run(main())
+    asyncio.run(bot.run(TOKEN))
