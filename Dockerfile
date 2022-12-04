@@ -9,6 +9,6 @@ RUN useradd --user-group -ms /bin/bash app
 ENV PYTHONUNBUFFERED 1
 ENV APP_DIR=/app
 
-RUN pip install --disable-pip-version-check -r src/settings/requirements.txt
+RUN pip install --disable-pip-version-check -r /app/requirements.txt
 RUN chown -R app:app $APP_DIR
 USER app
